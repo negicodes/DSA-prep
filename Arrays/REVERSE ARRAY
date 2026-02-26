@@ -1,0 +1,30 @@
+import java.util.*;
+class Main{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        int size = sc.nextInt();            //declare size of arr
+        int arr[] = new int[size];          // same
+        for (int i=0 ; i<arr.length ; i++){
+            arr[i] = sc.nextInt();          // declare array digits
+        }
+        int start = 0;
+        int end = size-1;
+        int temp = 0;                 //temp variable to store
+
+        while(start<end){
+            temp= arr[start];              // swapping takes place
+            arr[start] = arr[end];
+            arr[end] = temp;
+            start++;
+            end--;
+
+        }
+        for(int i =0; i<size ; i++){          // used for loop to print array cuz array store multiple value and cqn be accesed one by one
+            System.out.print(arr[i]);
+
+        }
+
+
+
+    }
+}
