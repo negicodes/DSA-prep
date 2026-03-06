@@ -1,18 +1,27 @@
-// second largest
+//second largest in arr
 
 import java.util.*;
-public static void main(String[] args){
-    int arr[] = {1,2,3,4,5};
+public static void main(String[]  args){
+    Scanner sc = new Scanner(System.in);
+    int size = sc.nextInt();
+    int arr[] = new int[size];
+    for(int i=0;i<size;i++){
+        arr[i] = sc.nextInt();
+    }
+  //  int arr[] = {8,6,19,11,7,3};
     int max = arr[0];
-    int second_max = arr[1];
-    for(int i = 0; i < arr.length; i++){
+    int sec_max = 0;
+    for (int i=1;i<arr.length;i++){
         if(max<arr[i]){
-            second_max = max;
+            sec_max = max;
             max = arr[i];
-        }else if(second_max<arr[i] && second_max != max){
-            second_max = arr[i];
+
+
+        }else if(sec_max<arr[i] && sec_max != max){
+            sec_max = arr[i];
         }
     }
-    System.out.println(second_max);
+    System.out.println(sec_max);
+
 
 }
