@@ -1,1 +1,27 @@
 
+
+
+import java.util.*;
+
+class Main {
+
+    public static void printok(int n, int sum) {
+
+        if(n == 0){              // base case
+            System.out.println(sum);
+            return;
+        }
+
+        sum += n;
+        printok(n-1, sum);       // recursive call
+    }
+
+    public static void main(String[] args){
+
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int sum = 0;
+
+        printok(n, sum);
+    }
+}
